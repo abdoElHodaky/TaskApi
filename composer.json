@@ -15,6 +15,7 @@
         "laravel/framework": "^8.0",
         "laravel/sanctum": "^2.15",
         "laravel/tinker": "^2.0",
+        "mtrajano/laravel-swagger": "^0.6.4",
         "rakutentech/laravel-request-docs": "2.28",
         "twilio/sdk": "^7.4"
     },
