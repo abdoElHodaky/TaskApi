@@ -18,8 +18,8 @@ ENV NODEJS_ALLOW_SUPERUSER 1
 ENV NPM_ALLOW_SUPERUSER 1
 ENV YARN_ALLOW_SUPERUSER 1
 ENV NPX_ALLOW_SUPERUSER 1
-RUN composer install
 RUN chmod 777 ./*
+RUN composer install
 RUN php artisan db:wipe --drop-types --force && php artisan migrate:install
 RUN php artisan migrate --force
 RUN php artisan db:seed --force
