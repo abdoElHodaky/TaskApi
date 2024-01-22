@@ -23,9 +23,8 @@ ENV NPX_ALLOW_SUPERUSER 1
 RUN chmod 777 ./*
 
 RUN composer install
-RUN php artisan vendor:publish --provider="Mpociot\ApiDoc\ApiDocGeneratorServiceProvider" --tag=apidoc-config
-RUN php artisan apidoc:generate
 RUN php artisan db:wipe --drop-types --force && php artisan migrate:install
 RUN php artisan migrate --force
 RUN php artisan db:seed --force
 EXPOSE 80 80
+CMD ["bash","-c","./migrate.sh"]
