@@ -1,5 +1,5 @@
 #/usr/bin/bash
 
-composer require ovac/idoc
-php artisan vendor:publish --tag=idoc-config
-php artisan idoc:generate
+composer require rakutentech/laravel-request-docs:2.28
+php artisan vendor:publish --tag=request-docs-config && php artisan route:cache
+
