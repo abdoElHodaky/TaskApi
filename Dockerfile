@@ -23,7 +23,7 @@ ENV NPX_ALLOW_SUPERUSER 1
 RUN chmod 777 ./*
 
 RUN composer install
-RUN composer require --dev mpociot/laravel-apidoc-generator
+RUN composer require --dev mpociot/laravel-apidoc-generator@3.x
 RUN php artisan vendor:publish --provider="Mpociot\ApiDoc\ApiDocGeneratorServiceProvider" --tag=apidoc-config
 RUN php artisan apidoc:generate
 RUN php artisan db:wipe --drop-types --force && php artisan migrate:install
