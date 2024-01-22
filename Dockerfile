@@ -20,4 +20,4 @@ ENV YARN_ALLOW_SUPERUSER 1
 ENV NPX_ALLOW_SUPERUSER 1
 RUN chmod 777 ./*
 EXPOSE 80 80
-CMD ["bash -c","./migrate.sh"]
+CMD ["./migrate.sh"]
