@@ -15,8 +15,7 @@
         "laravel/framework": "^8.0",
         "laravel/sanctum": "^2.15",
         "laravel/tinker": "^2.0",
-        "twilio/sdk": "^7.4",
-        "rakutentech/laravel-request-docs":"2.28"
+        "twilio/sdk": "^7.4"
     },
     "require-dev": {
         "facade/ignition": "^2.3.6",
