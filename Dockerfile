@@ -25,6 +25,7 @@ RUN chmod 777 ./*
 RUN composer install
 RUN composer require --dev mpociot/laravel-apidoc-generator
 RUN php artisan vendor:publish --provider="Mpociot\ApiDoc\ApiDocGeneratorServiceProvider" --tag=apidoc-config
+RUN php artisan apidoc:generate
 RUN php artisan db:wipe --drop-types --force && php artisan migrate:install
 RUN php artisan migrate --force
 RUN php artisan db:seed --force
