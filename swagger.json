@@ -5,7 +5,7 @@
         "description": "",
         "version": "1.0.0"
     },
-    "host": null,
+    "host": "https://laravelapi-i4ze.onrender.com",
     "basePath": "\/",
     "paths": {
         "\/sanctum\/csrf-cookie": {
