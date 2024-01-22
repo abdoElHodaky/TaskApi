@@ -26,6 +26,6 @@ RUN composer install
 RUN php artisan db:wipe --drop-types --force && php artisan migrate:install
 RUN php artisan migrate --force
 RUN php artisan db:seed --force
-RUN composer require rakutentech/laravel-request-docs
+RUN composer require rakutentech/laravel-request-docs:2.28
 RUN php artisan vendor:publish --tag=request-docs-config && php artisan route:cache
 EXPOSE 80 80
