@@ -1,5 +1,6 @@
 FROM richarvey/nginx-php-fpm:1.6.2
 RUN apk add -U --no-cache nghttp2-dev nodejs npm unzip tzdata
+COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
 COPY . /var/www/html
 
 ENV SKIP_COMPOSER 0
