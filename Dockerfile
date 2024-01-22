@@ -8,7 +8,7 @@ ENV RUN_SCRIPTS 1
 ENV REAL_IP_HEADER 1
 
 # Laravel config
-ENV APP_KEY base64:B6l/H5fSpR60Y+MpcKP22Z1B4Us7adD+jJrln8XOcpQ=
+ENV APP_KEY 
 ENV APP_ENV production
 ENV APP_DEBUG true
 ENV LOG_CHANNEL stderr
@@ -20,7 +20,7 @@ ENV NPM_ALLOW_SUPERUSER 1
 ENV YARN_ALLOW_SUPERUSER 1
 ENV NPX_ALLOW_SUPERUSER 1
 RUN chmod 777 ./*
-RUN  composer install
+RUN composer install
 RUN php artisan db:wipe --drop-types --force && php artisan migrate:install
 RUN php artisan migrate --force
 RUN php artisan db:seed --force
