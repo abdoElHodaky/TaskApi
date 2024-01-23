@@ -19,5 +19,4 @@ Route::get('/', function () {
 
 Route::get("/apidocs",function(){
  return file_get_contents(public_path()."swagger.html");
-    
-})
+});
