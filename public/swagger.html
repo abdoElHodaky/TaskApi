@@ -697,8 +697,9 @@ margin-bottom: 20px;
     // Script section to load models into a JS Var
     var defs = {}
         defs["body"] = {"type":"object","required":["password","phone"],"properties":{"phone":{"type":"string"},"password":{"type":"string"}}};
-        defs["body_1"] = {"type":"object","required":["body","coverImage","title"],"properties":{"title":{"type":"string"},"body":{"type":"string"},"coverImage":{"type":"string"}}};
-        defs["body_2"] = {"type":"object","required":["body","title"],"properties":{"title":{"type":"string"},"body":{"type":"string"},"coverImage":{"type":"string"}}};
+        defs["body_1"] = {"type":"object","required":["name","password","phone"],"properties":{"name":{"type":"string"},"phone":{"type":"string"},"password":{"type":"string"}}};
+        defs["body_2"] = {"type":"object","required":["body","coverImage","title"],"properties":{"title":{"type":"string"},"body":{"type":"string"},"coverImage":{"type":"string"}}};
+        defs["body_3"] = {"type":"object","required":["body","title"],"properties":{"title":{"type":"string"},"body":{"type":"string"},"coverImage":{"type":"string"}}};
   </script>
 
   <div class="container-fluid">
@@ -2036,7 +2037,7 @@ public class DefaultApiExample {
     public static void main(String[] args) {
         
         DefaultApi apiInstance = new DefaultApi();
-        Body_1 body = ; // Body_1 | 
+        Body_2 body = ; // Body_2 | 
         try {
             apiInstance.apiPostsStorePost(body);
         } catch (ApiException e) {
@@ -2054,7 +2055,7 @@ public class DefaultApiExample {
 
     public static void main(String[] args) {
         DefaultApi apiInstance = new DefaultApi();
-        Body_1 body = ; // Body_1 | 
+        Body_2 body = ; // Body_2 | 
         try {
             apiInstance.apiPostsStorePost(body);
         } catch (ApiException e) {
@@ -2069,7 +2070,7 @@ public class DefaultApiExample {
   <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
   </div> -->
                             <div class="tab-pane" id="examples-Default-apiPostsStorePost-0-objc">
-                              <pre class="prettyprint"><code class="language-cpp">Body_1 *body = ; //  (optional)
+                              <pre class="prettyprint"><code class="language-cpp">Body_2 *body = ; //  (optional)
 
 DefaultApi *apiInstance = [[DefaultApi alloc] init];
 
@@ -2089,7 +2090,7 @@ DefaultApi *apiInstance = [[DefaultApi alloc] init];
 var api = new SwaggerJsClient.DefaultApi()
 
 var opts = { 
-  'body':  // {Body_1} 
+  'body':  // {Body_2} 
 };
 
 var callback = function(error, data, response) {
@@ -2121,7 +2122,7 @@ namespace Example
         {
             
             var apiInstance = new DefaultApi();
-            var body = new Body_1(); // Body_1 |  (optional) 
+            var body = new Body_2(); // Body_2 |  (optional) 
 
             try
             {
@@ -2143,7 +2144,7 @@ namespace Example
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Swagger\Client\Api\DefaultApi();
-$body = ; // Body_1 | 
+$body = ; // Body_2 | 
 
 try {
     $api_instance->apiPostsStorePost($body);
@@ -2159,7 +2160,7 @@ use WWW::SwaggerClient::Configuration;
 use WWW::SwaggerClient::DefaultApi;
 
 my $api_instance = WWW::SwaggerClient::DefaultApi->new();
-my $body = WWW::SwaggerClient::Object::Body_1->new(); # Body_1 | 
+my $body = WWW::SwaggerClient::Object::Body_2->new(); # Body_2 | 
 
 eval { 
     $api_instance->apiPostsStorePost(body => $body);
@@ -2178,7 +2179,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = swagger_client.DefaultApi()
-body =  # Body_1 |  (optional)
+body =  # Body_2 |  (optional)
 
 try: 
     # 
@@ -2210,7 +2211,7 @@ $(document).ready(function() {
   "description" : "",
   "required" : false,
   "schema" : {
-    "$ref" : "#/definitions/body_1"
+    "$ref" : "#/definitions/body_2"
   }
 };
   var schema = schemaWrapper.schema;
@@ -2298,7 +2299,7 @@ public class DefaultApiExample {
         
         DefaultApi apiInstance = new DefaultApi();
         String id = id_example; // String | 
-        Body_2 body = ; // Body_2 | 
+        Body_3 body = ; // Body_3 | 
         try {
             apiInstance.apiPostsUpdateIdPost(id, body);
         } catch (ApiException e) {
@@ -2317,7 +2318,7 @@ public class DefaultApiExample {
     public static void main(String[] args) {
         DefaultApi apiInstance = new DefaultApi();
         String id = id_example; // String | 
-        Body_2 body = ; // Body_2 | 
+        Body_3 body = ; // Body_3 | 
         try {
             apiInstance.apiPostsUpdateIdPost(id, body);
         } catch (ApiException e) {
@@ -2333,7 +2334,7 @@ public class DefaultApiExample {
   </div> -->
                             <div class="tab-pane" id="examples-Default-apiPostsUpdateIdPost-0-objc">
                               <pre class="prettyprint"><code class="language-cpp">String *id = id_example; // 
-Body_2 *body = ; //  (optional)
+Body_3 *body = ; //  (optional)
 
 DefaultApi *apiInstance = [[DefaultApi alloc] init];
 
@@ -2356,7 +2357,7 @@ var api = new SwaggerJsClient.DefaultApi()
 var id = id_example; // {String} 
 
 var opts = { 
-  'body':  // {Body_2} 
+  'body':  // {Body_3} 
 };
 
 var callback = function(error, data, response) {
@@ -2389,7 +2390,7 @@ namespace Example
             
             var apiInstance = new DefaultApi();
             var id = id_example;  // String | 
-            var body = new Body_2(); // Body_2 |  (optional) 
+            var body = new Body_3(); // Body_3 |  (optional) 
 
             try
             {
@@ -2412,7 +2413,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Swagger\Client\Api\DefaultApi();
 $id = id_example; // String | 
-$body = ; // Body_2 | 
+$body = ; // Body_3 | 
 
 try {
     $api_instance->apiPostsUpdateIdPost($id, $body);
@@ -2429,7 +2430,7 @@ use WWW::SwaggerClient::DefaultApi;
 
 my $api_instance = WWW::SwaggerClient::DefaultApi->new();
 my $id = id_example; # String | 
-my $body = WWW::SwaggerClient::Object::Body_2->new(); # Body_2 | 
+my $body = WWW::SwaggerClient::Object::Body_3->new(); # Body_3 | 
 
 eval { 
     $api_instance->apiPostsUpdateIdPost(id => $id, body => $body);
@@ -2449,7 +2450,7 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = swagger_client.DefaultApi()
 id = id_example # String | 
-body =  # Body_2 |  (optional)
+body =  # Body_3 |  (optional)
 
 try: 
     # 
@@ -2511,7 +2512,7 @@ $(document).ready(function() {
   "description" : "",
   "required" : false,
   "schema" : {
-    "$ref" : "#/definitions/body_2"
+    "$ref" : "#/definitions/body_3"
   }
 };
   var schema = schemaWrapper.schema;
@@ -2598,8 +2599,9 @@ public class DefaultApiExample {
     public static void main(String[] args) {
         
         DefaultApi apiInstance = new DefaultApi();
+        Body_1 body = ; // Body_1 | 
         try {
-            apiInstance.apiRegisterPost();
+            apiInstance.apiRegisterPost(body);
         } catch (ApiException e) {
             System.err.println("Exception when calling DefaultApi#apiRegisterPost");
             e.printStackTrace();
@@ -2615,8 +2617,9 @@ public class DefaultApiExample {
 
     public static void main(String[] args) {
         DefaultApi apiInstance = new DefaultApi();
+        Body_1 body = ; // Body_1 | 
         try {
-            apiInstance.apiRegisterPost();
+            apiInstance.apiRegisterPost(body);
         } catch (ApiException e) {
             System.err.println("Exception when calling DefaultApi#apiRegisterPost");
             e.printStackTrace();
@@ -2629,12 +2632,13 @@ public class DefaultApiExample {
   <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
   </div> -->
                             <div class="tab-pane" id="examples-Default-apiRegisterPost-0-objc">
-                              <pre class="prettyprint"><code class="language-cpp">
+                              <pre class="prettyprint"><code class="language-cpp">Body_1 *body = ; //  (optional)
+
 DefaultApi *apiInstance = [[DefaultApi alloc] init];
 
 // 
-[apiInstance apiRegisterPostWithCompletionHandler: 
-              ^(NSError* error) {
+[apiInstance apiRegisterPostWith:body
+              completionHandler: ^(NSError* error) {
                             if (error) {
                                 NSLog(@"Error: %@", error);
                             }
@@ -2647,6 +2651,10 @@ DefaultApi *apiInstance = [[DefaultApi alloc] init];
 
 var api = new SwaggerJsClient.DefaultApi()
 
+var opts = { 
+  'body':  // {Body_1} 
+};
+
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -2654,7 +2662,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully.');
   }
 };
-api.apiRegisterPost(callback);
+api.apiRegisterPost(opts, callback);
 </code></pre>
                             </div>
 
@@ -2676,11 +2684,12 @@ namespace Example
         {
             
             var apiInstance = new DefaultApi();
+            var body = new Body_1(); // Body_1 |  (optional) 
 
             try
             {
                 // 
-                apiInstance.apiRegisterPost();
+                apiInstance.apiRegisterPost(body);
             }
             catch (Exception e)
             {
@@ -2697,9 +2706,10 @@ namespace Example
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Swagger\Client\Api\DefaultApi();
+$body = ; // Body_1 | 
 
 try {
-    $api_instance->apiRegisterPost();
+    $api_instance->apiRegisterPost($body);
 } catch (Exception $e) {
     echo 'Exception when calling DefaultApi->apiRegisterPost: ', $e->getMessage(), PHP_EOL;
 }
@@ -2712,9 +2722,10 @@ use WWW::SwaggerClient::Configuration;
 use WWW::SwaggerClient::DefaultApi;
 
 my $api_instance = WWW::SwaggerClient::DefaultApi->new();
+my $body = WWW::SwaggerClient::Object::Body_1->new(); # Body_1 | 
 
 eval { 
-    $api_instance->apiRegisterPost();
+    $api_instance->apiRegisterPost(body => $body);
 };
 if ($@) {
     warn "Exception when calling DefaultApi->apiRegisterPost: $@\n";
@@ -2730,10 +2741,11 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = swagger_client.DefaultApi()
+body =  # Body_1 |  (optional)
 
 try: 
     # 
-    api_instance.api_register_post()
+    api_instance.api_register_post(body=body)
 except ApiException as e:
     print("Exception when calling DefaultApi->apiRegisterPost: %s\n" % e)</code></pre>
                             </div>
@@ -2743,6 +2755,48 @@ except ApiException as e:
 
 
 
+                            <div class="methodsubtabletitle">Body parameters</div>
+                            <table id="methodsubtable">
+                              <tr>
+                                <th width="150px">Name</th>
+                                <th>Description</th>
+                              </tr>
+                                <tr><td style="width:150px;">body </td>
+<td>
+
+
+<script>
+$(document).ready(function() {
+  var schemaWrapper = {
+  "in" : "body",
+  "name" : "body",
+  "description" : "",
+  "required" : false,
+  "schema" : {
+    "$ref" : "#/definitions/body_1"
+  }
+};
+  var schema = schemaWrapper.schema;
+  if (schema.$ref != null) {
+    schema = defsParser.$refs.get(schema.$ref);
+  } else {
+    schemaWrapper.definitions = Object.assign({}, defs);
+    $RefParser.dereference(schemaWrapper).catch(function(err) {
+      console.log(err);
+    });
+  }
+
+  var view = new JSONSchemaView(schema,2,{isBodyParam: true});
+  var result = $('#d2e199_apiRegisterPost_body');
+  result.empty();
+  result.append(view.render());
+});
+</script>
+<div id="d2e199_apiRegisterPost_body"></div>
+</td>
+</tr>
+
+                            </table>
 
 
 
