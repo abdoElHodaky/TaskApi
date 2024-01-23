@@ -132,7 +132,33 @@
                     "200": {
                         "description": "OK"
                     }
-                }
+                },
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "schema": {
+                            "type": "object",
+                            "required": [
+                                "name",
+                                "phone",
+                                "password"
+                            ],
+                            "properties": {
+                                "name":{
+                                    "type":"string"
+                                },
+                                "phone": {
+                                    "type": "string"
+                                },
+                                "password": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ]
             }
         },
         "\/api\/verify": {
