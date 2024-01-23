@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     //return view('welcome');
-    redirect("/apidocs");
+    return redirect("/apidocs");
 });
 
 Route::get("/apidocs",function(){
