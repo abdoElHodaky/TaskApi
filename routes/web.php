@@ -16,3 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get("/apidocs",function(){
+ return file_get_contents(public_path()."swagger.html");
+    
+})
