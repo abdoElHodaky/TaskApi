@@ -23,7 +23,7 @@ ENV NPX_ALLOW_SUPERUSER 1
 RUN chmod 777 ./*
 
 RUN composer install
-RUN composer require spatie/laravel-responsecache && php artisan vendor:publish --tag="responsecache-config"
+#RUN composer require spatie/laravel-responsecache && php artisan vendor:publish --tag="responsecache-config"
 
 RUN php artisan db:wipe --drop-types --force && php artisan migrate:install
 RUN php artisan migrate --force
