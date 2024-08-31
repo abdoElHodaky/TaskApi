@@ -21,7 +21,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::post('/login','App\Http\Controllers\AuthController@login');
 Route::post('/register','App\Http\Controllers\AuthController@register');
 Route::post('/verify','App\Http\Controllers\AuthController@verify');
-Route::middleware('auth:sanctum')->group(function () {
+Route::middleware(['auth:sanctum','cacheResponse'])->group(function () {
     Route::post('logout', 'App\Http\Controllers\AuthController@logout');
 
     Route::prefix('tags')->group(function () {
